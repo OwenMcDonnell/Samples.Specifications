@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Fake.Shared", "Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj", "{D4027017-55E4-42B2-ABE2-AE0574B59AD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.EndToEnd.Domain.FlaUI", "Samples.Specifications.Tests.EndToEnd.Domain.FlaUI\Samples.Specifications.Tests.EndToEnd.Domain.FlaUI.csproj", "{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -399,7 +401,6 @@ Global
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -561,6 +562,20 @@ Global
 		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithFake|Any CPU.Build.0 = Release|Any CPU
 		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.IntegrationWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.IntegrationWithFake|Any CPU.Build.0 = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -618,5 +633,6 @@ Global
 		{34A63C12-097F-44AB-BE74-7D3811B70D30} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{632814BC-4F54-461F-8217-58C3A666BA6F} = {66E31A07-598B-4745-BE60-6B550F11F970}
 		{D4027017-55E4-42B2-ABE2-AE0574B59AD5} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
+		{D3DBBBDA-A085-490F-B8E8-2C709BFEAAA6} = {301A73F2-FDF6-493B-85E6-A867024AE159}
 	EndGlobalSection
 EndGlobal

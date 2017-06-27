@@ -18,7 +18,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             Func<Window> getWindow = () =>
             {
                 using (var automation = new UIA3Automation())
-                {
+                {                    
                     var window = app.GetAllTopLevelWindows(automation).SingleOrDefault(x => x.Title == title);
                     if (window == null ||
                         //window.Visible == false ||

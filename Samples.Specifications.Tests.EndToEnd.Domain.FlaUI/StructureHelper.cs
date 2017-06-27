@@ -9,6 +9,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
         internal Window GetShell()
         {
             var application = ApplicationContext.Application;
+            application.WaitWhileBusy();
             using (var automation = new UIA3Automation())
             {
                 var shellScreen =

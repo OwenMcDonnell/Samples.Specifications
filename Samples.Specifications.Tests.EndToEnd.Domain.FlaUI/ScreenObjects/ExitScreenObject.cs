@@ -17,7 +17,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             catch (Exception e)
             {
             }
-            return exitWindow?.Properties.IsOffscreen ?? false;
+            return exitWindow != null && exitWindow.Properties.IsOffscreen == false;
         }
 
         public void ExitWithSave()

@@ -101,9 +101,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var match = GetRowByKind(kind);
             try
-            {
-                match.Focus();
-                Task.Delay(1000).Wait();
+            {                
                 match.Cells[0].Click();
             }
             catch (Exception err)

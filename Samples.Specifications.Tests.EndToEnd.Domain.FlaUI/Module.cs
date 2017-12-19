@@ -6,15 +6,15 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator iocContainer)
         {
             iocContainer.RegisterAutomagically(Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
                 Assembly.GetExecutingAssembly());
             iocContainer.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
             iocContainer.RegisterSingleton<StructureHelper, StructureHelper>();
-            iocContainer.RegisterSingleton<IStartApplicationHelper, StartApplicationHelper>();
+            iocContainer.RegisterSingleton<IApplicationFacade, ApplicationFacade>();
         }
     }
 }

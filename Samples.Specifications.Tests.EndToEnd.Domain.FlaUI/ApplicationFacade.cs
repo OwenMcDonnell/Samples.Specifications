@@ -3,14 +3,19 @@ using LogoFX.Client.Testing.Contracts;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    public class StartApplicationHelper : IStartApplicationHelper
+    public class ApplicationFacade : IApplicationFacade
     {
         /// <summary>Starts the application.</summary>
         /// <param name="startupPath">The startup path.</param>
-        public void StartApplication(string startupPath)
+        public void Start(string startupPath)
         {
             ApplicationContext.Application = Application.Launch(startupPath);
             ApplicationContext.Application.WaitWhileBusy();
+        }
+
+        public void Stop()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

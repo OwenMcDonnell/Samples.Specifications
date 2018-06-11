@@ -17,40 +17,42 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class EditWarehouseItemFeature : Xunit.IClassFixture<EditWarehouseItemFeature.FixtureData>, System.IDisposable
+    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
+    public partial class EditWarehouseItemFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
-        
 #line 1 "EditWarehouseItem.feature"
 #line hidden
         
-        public EditWarehouseItemFeature(EditWarehouseItemFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
+        public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
-            this._testOutputHelper = testOutputHelper;
-            this.TestInitialize();
-        }
-        
-        public static void FeatureSetup()
-        {
-            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
+            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "EditWarehouseItem", "\tIn order to reflect the current warehouse items\' state\r\n\tAs a warehouse manager\r" +
                     "\n\tI want to be able to update warehouse items\' properties", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
+            if (((testRunner.FeatureContext != null) 
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "EditWarehouseItem")))
+            {
+                global::Samples.Specifications.Tests.Acceptance.Specs.EditWarehouseItemFeature.FeatureSetup(null);
+            }
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -59,7 +61,6 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
         }
         
         public virtual void ScenarioCleanup()
@@ -67,14 +68,9 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
             testRunner.CollectScenarioErrors();
         }
         
-        void System.IDisposable.Dispose()
-        {
-            this.ScenarioTearDown();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Edit item price")]
-        [Xunit.TraitAttribute("FeatureTitle", "EditWarehouseItem")]
-        [Xunit.TraitAttribute("Description", "Edit item price")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Edit item price")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EditWarehouseItem")]
         public virtual void EditItemPrice()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit item price", ((string[])(null)));
@@ -113,9 +109,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Display error for incorrect Price value")]
-        [Xunit.TraitAttribute("FeatureTitle", "EditWarehouseItem")]
-        [Xunit.TraitAttribute("Description", "Display error for incorrect Price value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display error for incorrect Price value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EditWarehouseItem")]
         public virtual void DisplayErrorForIncorrectPriceValue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error for incorrect Price value", ((string[])(null)));
@@ -158,9 +154,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Display error for incorrect Quantity value")]
-        [Xunit.TraitAttribute("FeatureTitle", "EditWarehouseItem")]
-        [Xunit.TraitAttribute("Description", "Display error for incorrect Quantity value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display error for incorrect Quantity value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EditWarehouseItem")]
         public virtual void DisplayErrorForIncorrectQuantityValue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error for incorrect Quantity value", ((string[])(null)));
@@ -203,9 +199,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Display error for incorrect Kind value")]
-        [Xunit.TraitAttribute("FeatureTitle", "EditWarehouseItem")]
-        [Xunit.TraitAttribute("Description", "Display error for incorrect Kind value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display error for incorrect Kind value")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EditWarehouseItem")]
         public virtual void DisplayErrorForIncorrectKindValue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error for incorrect Kind value", ((string[])(null)));
@@ -246,22 +242,6 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Then("Error message is displayed with the following text \'Kind should not be empty.\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
-        }
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
-        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        public class FixtureData : System.IDisposable
-        {
-            
-            public FixtureData()
-            {
-                EditWarehouseItemFeature.FeatureSetup();
-            }
-            
-            void System.IDisposable.Dispose()
-            {
-                EditWarehouseItemFeature.FeatureTearDown();
-            }
         }
     }
 }

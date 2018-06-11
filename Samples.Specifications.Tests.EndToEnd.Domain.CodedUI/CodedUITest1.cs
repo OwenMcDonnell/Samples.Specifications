@@ -7,10 +7,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Samples.Specifications.Tests.EndToEnd.Domain.CodedUI
 {
     /// <summary>
-    /// Summary description for CodedUITest1
+    /// Summary description for CodedUITest1 - still alive because Test Builder can be used only inside a CodedUITest
+    /// UIMap is alive because it contains some samples
     /// </summary>
-    //[CodedUITest]
-    [TestClass]
+    [CodedUITest]    
     public class CodedUITest1
     {        
         [TestMethod]

@@ -62,6 +62,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU' ">
     <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">

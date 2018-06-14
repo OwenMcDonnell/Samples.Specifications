@@ -7,12 +7,13 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.CodedUI
     {
         public void Start(string startupPath)
         {
+            Playback.Initialize();
             ApplicationUnderTest.Launch(startupPath);
         }
 
         public void Stop()
         {
-            
+            Playback.Cleanup();
         }
     }
 }

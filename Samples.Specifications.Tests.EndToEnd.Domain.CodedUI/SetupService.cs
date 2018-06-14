@@ -22,7 +22,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.CodedUI
 #if FAKE        
         public void Setup()
         {    
-            Playback.Initialize();
+            //Playback.Initialize();
         }
 #endif
     }

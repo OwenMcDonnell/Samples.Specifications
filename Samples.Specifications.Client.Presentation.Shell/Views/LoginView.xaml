@@ -8,6 +8,7 @@
         xmlns:commanding="clr-namespace:LogoFX.Client.Mvvm.Commanding;assembly=LogoFX.Client.Mvvm.Commanding.Platform"
         xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
         xmlns:actions="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Actions;assembly=LogoFX.Client.Mvvm.View.Platform"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         mc:Ignorable="d"
         MaxWidth="600"
         d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
@@ -27,6 +28,7 @@
             <RowDefinition Height="32" />
             <RowDefinition Height="*" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -116,7 +118,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0"
+            <telerik:RadButton Grid.Column="0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
                     AutomationProperties.AutomationId="Login_SignIn"
@@ -126,7 +128,7 @@
                         <commanding:ExecuteCommandAction Command="{Binding Path=LoginCommand, Mode=OneTime}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
-            </Button>
+            </telerik:RadButton>
 
             <Button Grid.Column="2"
                     VerticalAlignment="Center"
@@ -138,7 +140,13 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
+
+            
         </Grid>
+
+        <telerik:RadComboBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" AutomationProperties.AutomationId="test">
+
+        </telerik:RadComboBox>
     </Grid>
 
 </Window>

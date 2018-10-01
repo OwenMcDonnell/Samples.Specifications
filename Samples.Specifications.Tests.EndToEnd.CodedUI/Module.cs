@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Attest.Testing.Contracts;
 using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
@@ -12,7 +13,8 @@ namespace Samples.Specifications.Tests.EndToEnd
             dependencyRegistrator.RegisterAutomagically(
                     Assembly.LoadFrom("Samples.Specifications.Tests.Contracts.dll"),
                     Assembly.GetExecutingAssembly())                
-                .AddSingleton<IApplicationFacade, ApplicationFacade>();
+                .AddSingleton<IApplicationFacade, ApplicationFacade>()
+                .AddSingleton<ITeardownService, TeardownService>();
         }
     }
 }

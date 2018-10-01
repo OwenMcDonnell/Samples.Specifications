@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\EndToEndWithFake\</OutputPath>
+    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>

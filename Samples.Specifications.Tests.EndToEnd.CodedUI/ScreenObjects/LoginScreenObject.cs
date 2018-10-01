@@ -36,7 +36,11 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 
         public string GetErrorMessage()
         {
-            throw new System.NotImplementedException();
+            var errorText = new WpfText(GetLoginWindow());
+            errorText.SearchProperties.Add(new PropertyExpression(WpfControl.PropertyNames.AutomationId, "Login_FailureTextBlock"));
+            errorText.Find();
+            errorText.WaitForControlReady();
+            return errorText.DisplayText;
         }
 
         private WpfWindow GetLoginWindow()

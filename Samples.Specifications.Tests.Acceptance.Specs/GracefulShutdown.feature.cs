@@ -17,40 +17,56 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GracefulShutdownFeature : Xunit.IClassFixture<GracefulShutdownFeature.FixtureData>, System.IDisposable
+    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
+    public partial class GracefulShutdownFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
+        private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
 #line 1 "GracefulShutdown.feature"
 #line hidden
         
-        public GracefulShutdownFeature(GracefulShutdownFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
         {
-            this._testOutputHelper = testOutputHelper;
-            this.TestInitialize();
+            get
+            {
+                return this._testContext;
+            }
+            set
+            {
+                this._testContext = value;
+            }
         }
         
-        public static void FeatureSetup()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
+        public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
-            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
+            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GracefulShutdown", "\tIn order to avoid losing data\r\n\tAs a system user\r\n\tI want to have an option of s" +
                     "aving changes before closing the application", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
+            if (((testRunner.FeatureContext != null) 
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "GracefulShutdown")))
+            {
+                global::Samples.Specifications.Tests.Acceptance.Specs.GracefulShutdownFeature.FeatureSetup(null);
+            }
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -59,7 +75,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>(_testContext);
         }
         
         public virtual void ScenarioStart()
@@ -72,14 +88,9 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
             testRunner.CollectScenarioErrors();
         }
         
-        void System.IDisposable.Dispose()
-        {
-            this.ScenarioTearDown();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Display exit application options if there are unsaved changes")]
-        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Display exit application options if there are unsaved changes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display exit application options if there are unsaved changes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "GracefulShutdown")]
         public virtual void DisplayExitApplicationOptionsIfThereAreUnsavedChanges()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display exit application options if there are unsaved changes", null, ((string[])(null)));
@@ -125,9 +136,9 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Don\'t display exit application options if there are no unsaved changes")]
-        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Don\'t display exit application options if there are no unsaved changes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Don\'t display exit application options if there are no unsaved changes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "GracefulShutdown")]
         public virtual void DontDisplayExitApplicationOptionsIfThereAreNoUnsavedChanges()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Don\'t display exit application options if there are no unsaved changes", null, ((string[])(null)));
@@ -175,9 +186,9 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Save changed item data if exit with save option is selected")]
-        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Save changed item data if exit with save option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save changed item data if exit with save option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "GracefulShutdown")]
         public virtual void SaveChangedItemDataIfExitWithSaveOptionIsSelected()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save changed item data if exit with save option is selected", null, ((string[])(null)));
@@ -227,9 +238,9 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Discard changed item data if exit without save option is selected")]
-        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Discard changed item data if exit without save option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Discard changed item data if exit without save option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "GracefulShutdown")]
         public virtual void DiscardChangedItemDataIfExitWithoutSaveOptionIsSelected()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Discard changed item data if exit without save option is selected", null, ((string[])(null)));
@@ -279,9 +290,9 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Keep changed item data if cancel option is selected")]
-        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Keep changed item data if cancel option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Keep changed item data if cancel option is selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "GracefulShutdown")]
         public virtual void KeepChangedItemDataIfCancelOptionIsSelected()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Keep changed item data if cancel option is selected", null, ((string[])(null)));
@@ -329,22 +340,6 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("the changes are intact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
-        }
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
-        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        public class FixtureData : System.IDisposable
-        {
-            
-            public FixtureData()
-            {
-                GracefulShutdownFeature.FeatureSetup();
-            }
-            
-            void System.IDisposable.Dispose()
-            {
-                GracefulShutdownFeature.FeatureTearDown();
-            }
         }
     }
 }

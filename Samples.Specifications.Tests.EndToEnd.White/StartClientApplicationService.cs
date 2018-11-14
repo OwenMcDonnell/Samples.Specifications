@@ -29,8 +29,11 @@ namespace Samples.Specifications.Tests.EndToEnd
 
         private static void StartWebAii(string applicationPath)
         {
-            Settings settings = new Settings();
-            settings.Wpf.DefaultApplicationPath = applicationPath;
+            Settings settings = new Settings
+            {
+                ClientReadyTimeout = 100,
+                Wpf = {DefaultApplicationPath = applicationPath}
+            };
             Manager manager = new Manager(settings);
 
             var process = Process.GetProcesses().FirstOrDefault(t => t.ProcessName.StartsWith("Samples"));

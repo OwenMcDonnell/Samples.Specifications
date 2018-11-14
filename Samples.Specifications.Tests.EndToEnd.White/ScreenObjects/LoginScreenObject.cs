@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using ArtOfTest.WebAii.Core;
 using ArtOfTest.WebAii.Wpf;
 using LogoFX.Client.Testing.EndToEnd.White;
@@ -16,8 +18,9 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
             /*var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");            
             loginButton.Click();*/
-            var loginScreen = GetLoginScreenTelerik();
+            var loginScreen = GetLoginScreenTelerik();            
             var loginButton = loginScreen.Find.ByAutomationId("Login_SignIn");
+            Task.Delay(1000).Wait();
             loginButton.User.Click();            
         }
 
@@ -55,7 +58,13 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 
         private WpfWindow GetLoginScreenTelerik()
         {
-            var loginScreen = Manager.Current.Applications[0].GetWindow("Login View");                        
+            WpfWindow loginScreen = null;
+            while(loginScreen == null)
+            {
+                //Yes it's an infinite loop
+                var windows = Manager.Current.Applications[0].Windows.ToArray();
+                 loginScreen = windows.FirstOrDefault(t => t.Window.Caption == "Login View");
+            }            
             return loginScreen;
         }
 

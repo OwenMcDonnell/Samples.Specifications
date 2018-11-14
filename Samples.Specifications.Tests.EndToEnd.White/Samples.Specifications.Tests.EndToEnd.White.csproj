@@ -91,6 +91,7 @@
     <Compile Include="ScreenObjects\ShellScreenObject.cs" />
     <Compile Include="StartClientApplicationService.cs" />
     <Compile Include="StructureHelper.cs" />
+    <Compile Include="TeardownService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

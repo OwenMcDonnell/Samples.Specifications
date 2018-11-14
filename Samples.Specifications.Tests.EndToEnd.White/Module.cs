@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Attest.Testing.Contracts;
 using JetBrains.Annotations;
+using LogoFX.Client.Testing.Contracts;
 using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Contracts;
 using Solid.Practices.IoC;
@@ -17,6 +18,7 @@ namespace Samples.Specifications.Tests.EndToEnd
                 Assembly.GetExecutingAssembly())               
             .AddSingleton<StructureHelper, StructureHelper>()
             .AddSingleton<IApplicationFacade, ApplicationFacade>()                
-            .AddSingleton<ITeardownService, TeardownService>();
+            .AddSingleton<ITeardownService, TeardownService>()
+            .AddSingleton<IStartClientApplicationService, StartClientApplicationService>();
     }
 }

@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Threading;
 using Attest.Testing.Contracts;
+using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {
     public sealed class GeneralSteps
     {
-        private readonly IStartLocalApplicationService _startLocalApplicationService;
+        private readonly IStartClientApplicationService _startLocalApplicationService;
         private readonly IShellScreenObject _shellScreenObject;
 
         public GeneralSteps(
-            IStartLocalApplicationService startLocalApplicationService,
+            IStartClientApplicationService startLocalApplicationService,
             IShellScreenObject shellScreenObject)
         {
             _startLocalApplicationService = startLocalApplicationService;
@@ -20,7 +21,7 @@ namespace Samples.Specifications.Tests.Steps
 
         public void WhenIOpenTheApplication()
         {
-            _startLocalApplicationService.Start();
+            _startLocalApplicationService.StartApplication();
         }
 
         public void WhenICloseTheApplication()

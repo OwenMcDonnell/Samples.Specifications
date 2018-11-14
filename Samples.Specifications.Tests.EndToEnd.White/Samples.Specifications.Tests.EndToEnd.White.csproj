@@ -60,6 +60,14 @@
     </DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ArtOfTest.WebAii, Version=2018.3.1004.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ArtOfTest.WebAii.dll</HintPath>
+    </Reference>
+    <Reference Include="ArtOfTest.WebAii.AspNet, Version=2018.3.1004.0, Culture=neutral, PublicKeyToken=787736db708a4086, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ArtOfTest.WebAii.AspNet.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -81,6 +89,7 @@
     <Compile Include="ScreenObjects\MainScreenObject.cs" />
     <Compile Include="ScreenObjects\WarehouseScreenObject.cs" />
     <Compile Include="ScreenObjects\ShellScreenObject.cs" />
+    <Compile Include="StartClientApplicationService.cs" />
     <Compile Include="StructureHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +118,9 @@
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Testing.EndToEnd.White">
       <Version>1.1.1-rc8</Version>
+    </PackageReference>
+    <PackageReference Include="LogoFX.Client.Tests.Contracts">
+      <Version>1.1.1-rc5</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.IoC">
       <Version>1.2.1-rc7</Version>

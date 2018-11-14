@@ -1,4 +1,6 @@
 ﻿using System;
+using ArtOfTest.WebAii.Core;
+using ArtOfTest.WebAii.Wpf;
 using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
 using TestStack.White.UIItems;
@@ -10,14 +12,17 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
     internal sealed class LoginScreenObject : ILoginScreenObject
     {
         public void Login()
-        {
-            var loginScreen = GetLoginScreen();
-            var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();            
+        {            
+            /*var loginScreen = GetLoginScreen();
+            var loginButton = loginScreen.Get<Button>("Login_SignIn");            
+            loginButton.Click();*/
+            var loginScreen = GetLoginScreenTelerik();
+            var loginButton = loginScreen.Find.ByAutomationId("Login_SignIn");
+            loginButton.User.Click();            
         }
 
         public void SetUsername(string username)
-        {
+        {            
             var loginScreen = GetLoginScreen();
             for (int i = 0; i < 3; i++)
             {
@@ -45,6 +50,12 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
             {
                 throw new Exception();
             }
+            return loginScreen;
+        }
+
+        private WpfWindow GetLoginScreenTelerik()
+        {
+            var loginScreen = Manager.Current.Applications[0].GetWindow("Login View");                        
             return loginScreen;
         }
 

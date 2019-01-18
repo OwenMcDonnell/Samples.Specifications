@@ -1,6 +1,6 @@
 configuration: EndToEndWithFake
-#environment:
- # APPVEYOR_BUILD_WORKER_CLOUD: GCE
+environment:
+  APPVEYOR_BUILD_WORKER_CLOUD: GCE
 before_build:
 - nuget restore Specifications.sln
 
